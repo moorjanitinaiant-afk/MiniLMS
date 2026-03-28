@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Units</h2>
+
+{% for unit in units %}
+
+<div class="card p-3 mb-3">
+
+<h4>{{unit.name}}</h4>
+
+<a href="/videos/{{unit.id}}/" class="btn btn-primary">
+Watch Videos
+</a>
+
+</div>
+
+{% endfor %}
+
+<hr>
+
+<h3>PDF Notes</h3>
+
+{% for pdf in pdfs %}
+
+<p>
+
+<a href="{{pdf.pdf_file.url}}" download>
+
+📄 {{pdf.title}}
+
+</a>
+
+</p>
+
+{% endfor %}
+
+{% endblock %}

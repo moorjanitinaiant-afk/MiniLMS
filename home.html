@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2 class="text-center mb-4"> Semesters </h2>
+
+<div class="row">
+
+{% for sem in semesters %}
+
+<div class="col-md-4">
+
+<div class="card p-4 mb-4">
+
+<h4>{{sem.name}}</h4>
+
+<a href="/subjects/{{sem.id}}/" class="btn btn-primary">
+Open
+</a>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

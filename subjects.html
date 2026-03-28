@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Subjects</h2>
+
+{% for subject in subjects %}
+
+<div class="card p-3 mb-3">
+
+<h4>{{subject.name}}</h4>
+
+<a href="/units/{{subject.id}}/" class="btn btn-primary">
+View Units
+</a>
+
+</div>
+
+{% endfor %}
+
+{% endblock %}
